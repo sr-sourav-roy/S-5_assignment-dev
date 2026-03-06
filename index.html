@@ -32,10 +32,12 @@
             Dev<span class="font-bold">Board</span>
           </h1>
         </div>
-        <!-- right side -->
+        <!-- 😁right side -->
         <div class="flex justify-center items-center gap-2">
           <img src="./assets/checkbox.png" alt="" />
-          <p class="text-3xl font-semibold">25</p>
+          <p class="text-3xl font-semibold">
+            <span id="increaseCounter">25</span>
+          </p>
           <button class="mx-5">
             <img src="./assets/theme-btn.png" alt="" />
           </button>
@@ -59,10 +61,12 @@
                   alt=""
                 />
               </div>
-              <!-- number -->
+              <!-- 😁number -->
               <div class="text-center">
                 <h4 class="font-light">Task Assigned</h4>
-                <p class="text-2xl font-bold text-start">05</p>
+                <p class="text-2xl font-bold text-start">
+                  <span id="decreaseCounter">5</span>
+                </p>
               </div>
             </div>
             <!-- Discover container -->
@@ -97,22 +101,27 @@
         </div>
         <!-- two container -->
         <div class="w-1/3 border-none rounded-3xl text-center">
-          <div class="bg-white">
+          <div class="bg-white mb-9">
             <h1 class="text-2xl font-light p-3 text-center mb-3">
               <i class="fa-brands fa-creative-commons"></i> Activity Log
             </h1>
             <button
-              class="btn text-white bg-blue-500 rounded-md border-none mb-20"
+              id="clear-history"
+              class="btn text-white bg-blue-500 rounded-md border-none"
             >
               Clear History
+              <br />
             </button>
+            <ul id="transaction"></ul>
           </div>
         </div>
       </div>
       <!-- card container -->
-      <div class="max-w-screen-xl mx-auto mt-6 grid grid-cols-3 pb-35 gap-y-6">
+      <div
+        class="cards max-w-screen-xl mx-auto mt-6 grid grid-cols-3 pb-35 gap-y-6 cards"
+      >
         <!-- card-1 -->
-        <div class="card bg-sky-50 w-96 shadow-sm shadow-md">
+        <div class="bg-sky-50 w-96 shadow-sm shadow-md">
           <div class="card-body">
             <h3 class="p-2 bg-white rounded-md w-20">ShopEase</h3>
             <h2 class="card-title">Fix Mobile Button Issue</h2>
@@ -124,12 +133,12 @@
                 <p class="font-light">Deadline</p>
                 <h3 class="font-semibold">21 March 2025</h3>
               </div>
-              <button class="btn btn-primary">Completed</button>
+              <button class="btn btn-primary card" value="1">Completed</button>
             </div>
           </div>
         </div>
         <!-- card-2 -->
-        <div class="card bg-sky-50 w-96 shadow-sm shadow-md">
+        <div class="bg-sky-50 w-96 shadow-sm shadow-md">
           <div class="card-body">
             <h3 class="p-2 bg-white rounded-md w-20">ShopEase</h3>
             <h2 class="card-title">Fix Mobile Button Issue</h2>
@@ -141,12 +150,12 @@
                 <p class="font-light">Deadline</p>
                 <h3 class="font-semibold">21 March 2025</h3>
               </div>
-              <button class="btn btn-primary">Completed</button>
+              <button class="btn btn-primary card">Completed</button>
             </div>
           </div>
         </div>
         <!-- card-3 -->
-        <div class="card bg-sky-50 w-96 shadow-sm shadow-md">
+        <div class="bg-sky-50 w-96 shadow-sm shadow-md">
           <div class="card-body">
             <h3 class="p-2 bg-white rounded-md w-20">ShopEase</h3>
             <h2 class="card-title">Fix Mobile Button Issue</h2>
@@ -158,12 +167,12 @@
                 <p class="font-light">Deadline</p>
                 <h3 class="font-semibold">21 March 2025</h3>
               </div>
-              <button class="btn btn-primary">Completed</button>
+              <button class="btn btn-primary card">Completed</button>
             </div>
           </div>
         </div>
         <!-- card-4 -->
-        <div class="card bg-sky-50 w-96 shadow-sm shadow-md">
+        <div class="bg-sky-50 w-96 shadow-sm shadow-md">
           <div class="card-body">
             <h3 class="p-2 bg-white rounded-md w-20">ShopEase</h3>
             <h2 class="card-title">Fix Mobile Button Issue</h2>
@@ -175,12 +184,12 @@
                 <p class="font-light">Deadline</p>
                 <h3 class="font-semibold">21 March 2025</h3>
               </div>
-              <button class="btn btn-primary">Completed</button>
+              <button class="btn btn-primary card">Completed</button>
             </div>
           </div>
         </div>
         <!-- card-5 -->
-        <div class="card bg-sky-50 w-96 shadow-sm shadow-md">
+        <div class="bg-sky-50 w-96 shadow-sm shadow-md">
           <div class="card-body">
             <h3 class="p-2 bg-white rounded-md w-20">ShopEase</h3>
             <h2 class="card-title">Fix Mobile Button Issue</h2>
@@ -192,12 +201,12 @@
                 <p class="font-light">Deadline</p>
                 <h3 class="font-semibold">21 March 2025</h3>
               </div>
-              <button class="btn btn-primary">Completed</button>
+              <button class="btn btn-primary card">Completed</button>
             </div>
           </div>
         </div>
         <!-- card-6 -->
-        <div class="card bg-sky-50 w-96 shadow-sm shadow-md">
+        <div class="bg-sky-50 w-96 shadow-sm shadow-md">
           <div class="card-body">
             <h3 class="p-2 bg-white rounded-md w-20">ShopEase</h3>
             <h2 class="card-title">Fix Mobile Button Issue</h2>
@@ -209,12 +218,22 @@
                 <p class="font-light">Deadline</p>
                 <h3 class="font-semibold">21 March 2025</h3>
               </div>
-              <button class="btn btn-primary">Completed</button>
+              <button class="btn btn-primary card">Completed</button>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer></footer>
+    <script src="./script/card.js"></script>
+    <!-- <script>
+      document
+        .getElementById("clear-history")
+        .addEventListener("click", function () {
+          while (li.transaction) {
+            li.removeChild(li.transaction);
+          }
+        });
+    </script> -->
   </body>
 </html>

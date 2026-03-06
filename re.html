@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Increase: <span id="increase">0</span></h3>
+    <h3>Decrease: <span id="decrease">6</span></h3>
+
+    <div class="cards">
+      <button class="card">Card 1</button>
+      <button class="card">Card 2</button>
+      <button class="card">Card 3</button>
+      <button class="card">Card 4</button>
+      <button class="card">Card 5</button>
+      <button class="card">Card 6</button>
+    </div>
+
+    <h3>Transaction</h3>
+    <ul id="transaction"></ul>
+    <script>
+      let increase = 0;
+      let decrease = 6;
+
+      const increaseEl = document.getElementById("increase");
+      const decreaseEl = document.getElementById("decrease");
+      const cards = document.querySelectorAll(".card");
+      const transaction = document.getElementById("transaction");
+
+      cards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+          if (increase < 6) {
+            increase++;
+            decrease--;
+
+            increaseEl.textContent = increase;
+            decreaseEl.textContent = decrease;
+
+            // Transaction add
+            const li = document.createElement("li");
+            li.innerText = `Clicked Card ${index + 1}`;
+            transaction.appendChild(li);
+            card.disabled = true;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
